@@ -1,5 +1,5 @@
 import React from 'react'
-import withLayout from './pages/withLayout'
+import withLayout from '../withLayout'
 
 function Blog() {
   return (
