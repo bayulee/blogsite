@@ -1,10 +1,28 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 function withLayout(Component) {
 
+  function Layout() {
+  const location = useLocation();
+  const [activeNav, setActiveNav] = useState("home");
+  useEffect(()=>{
+  let currentLoc =location.pathname.split("/");
+  let current = currentLoc[1];
 
-function Layout() {
+  switch (current) {
+    case "about":
+      setActiveNav("about");
+      break;
+      case "blog":
+        setActiveNav("blog");
+        break;
+      default:
+            setActiveNav("home");
+            break;
+  }
+  }, [location.pathname]);
+
 
   return (
     <div  className='layout'>
@@ -12,9 +30,9 @@ function Layout() {
     <span>Logo</span>
     <div>
     <nav>
-    <span className='nav-link'><Link  to="/">Home</Link></span>
-    <span className='nav-link'><Link to="/">About</Link></span>
-    <span className='nav-link'><Link to="/">Blog</Link></span>
+    <span className={`nav-Link ${activeNav === "home" ? "active":""} `}><Link  to="/">Home</Link></span>
+    <span className={`nav-Link ${activeNav === "about" ? "active":""} `}><Link to="/">About</Link></span>
+    <span className={`nav-Link ${activeNav === "blog" ? "active":""} `}><Link to="/">Blog</Link></span>
     </nav>
     </div>
     </header>
@@ -33,7 +51,7 @@ function Layout() {
 
 
 
-return Layout
+return Layout;
 }
 
-export default withLayout
+export default withLayout;
