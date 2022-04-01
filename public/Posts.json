@@ -1,0 +1,18 @@
+[
+    {
+        "id":1,
+        "image":"1.png",
+        "slug":"post-number-one",
+        "title":" ukraine war",
+        "extract":" Since last summer, thousands of migrants and refugees -- mostly from the Middle East -- have come knocking only to beturned away by Poland, which sees their arrival as a kind of ",
+        "body":"Poland has welcomed two million refugees from war-torn Ukraine at lightning speed and with open arms. Yet just north of that border,the EU member continues to push back those crossing from Belarus",
+},
+{
+    "id":2,
+    "image":"1.png",
+    "slug":"post-number-one",
+    "title":" ukraine war",
+    "extract": " Since last summer, thousands of migrants and refugees mostly from the Middle East -- have come knocking only to beturned away by Poland, which sees their arrival as a kind of " ,
+    "body":  "Poland has welcomed two million refugees from war-torn Ukraine at lightning speed and with open arms. Yet just north of that border,the EU member continues to push back those crossing from Belarus",
+}
+]
