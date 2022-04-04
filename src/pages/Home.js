@@ -1,28 +1,24 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import withLayout from './withLayout'
 
 function Home() {
+  const navigate=useNavigate()
   return (
     <div>
-    <h1>WELCOME TO MY HOMEPAGE</h1>
-    <div>
-    <p>Noto is a global font collection for writing in all modern and ancient languages.
-     Noto Serif is a modulated (“serif”) design for texts in the Latin, Cyrillic and Greek scripts,
-      also suitable as the complementary font for other script-specific Noto Serif fonts.
-     It has italic styles, multiple weights and widths, and 3,256 glyphs.
-     </p>
-     <p>Noto is a global font collection for writing in all modern and ancient languages. 
-     Noto Serif is a modulated (“serif”) design for texts in the Latin, Cyrillic and Greek scripts,
-      also suitable as the complementary font for other script-specific Noto Serif fonts. 
-     It has italic styles, multiple weights and widths, and 3,256 glyphs.</p>
+   <div className='banner'>
+   <h1>welcome to my webpage</h1>
+   <p>the lord is my shepherd. i shall not want,
+    he lead me beside still waters. 
+    even thought i walk throungh the shadows of darkness i shall not want.
+   his rod and spear he use to protect me.</p>
+   <div className="actions-wrap">
+   <button className='btn-online' onClick={()=>navigate("./about")}> About me</button>
+   <button className='btn-contain'onClick={()=>navigate("./blog")}> Read Blogs</button>
 
-     <p>Noto is a global font collection for writing in all modern and ancient languages. 
-     Noto Serif is a modulated (“serif”) design for texts in the Latin, Cyrillic and Greek scripts,
-      also suitable as the complementary font for other script-specific Noto Serif fonts. 
-     It has italic styles, multiple weights and widths, and 3,256 glyphs.</p>
-    </div>
-    
-    
+   </div >
+
+   </div>
     
     </div>
   )

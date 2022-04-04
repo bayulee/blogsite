@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 
 
 
+
 function BlogDetail(){
     const location=useLocation()
     const [post, setPost]=useState({});

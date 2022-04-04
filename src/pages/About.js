@@ -1,35 +1,32 @@
-import withLayout from "./withLayout";
+import React from 'react'
+import withLayout from './withLayout'
+import { useContext } from 'react'
+import {AboutContext} from "../context/AboutContext"
 
-function About(){
-    return(
-<div>
-<h1>welcome to the about page</h1>
-<br/>
-<div>
-<p>
-"when they see a red flag"
-The subject of this clause is "they," and the verb is "see."
- We have not shown this one in bold because it is a dependent clause. 
- This clause is functioning like an adverb. Compare the sentence to "All cars stop immediately." 
-This proves that "when they see a red flag" is functioning as an adverb.
-</p>
-<p>
-"when they see a red flag"
-The subject of this clause is "they," and the verb is "see."
- We have not shown this one in bold because it is a dependent clause. 
- This clause is functioning like an adverb. Compare the sentence to "All cars stop immediately." 
-This proves that "when they see a red flag" is functioning as an adverb.
-</p>
-<p>
-"when they see a red flag"
-The subject of this clause is "they," and the verb is "see."
- We have not shown this one in bold because it is a dependent clause. 
- This clause is functioning like an adverb. Compare the sentence to "All cars stop immediately." 
-This proves that "when they see a red flag" is functioning as an adverb.
-</p>
-</div>
-</div>
-
-    );
+function About() {
+    const{about} =useContext(AboutContext)
+  return (
+    <div  style={{maxWidth:"700px",margin:"auto",padding:"20px 0"}}>
+    <h2>about me</h2>
+    <div style={{marginTop:"10px"}}>
+    <h3>Name</h3>
+    <p>{about.name}</p>
+    </div>
+    <div style={{marginTop:"10px"}}>
+    <h3>Bio</h3>
+    <p>about.Bio</p>
+    </div>
+    <div style={{marginTop:"10px"}}>
+    <h3>Hobbies</h3>
+{about.hobbies.map((hobby)=>(
+    <p key={hobby} style={{display:"inline-block", marginRight:"10px"}}>
+    {hobby}
+    </p>
+))}
+    </div>
+    
+    </div>
+  )
 }
-export default withLayout(About);
+
+export default withLayout(About)
